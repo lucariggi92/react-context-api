@@ -8,6 +8,7 @@ import SingleProduct from './pages/SingleProduct';
 
 function App() {
   return (
+       <BudgetProvider>
     <BrowserRouter>
       <Routes>
         <Route element ={<DefaultLayout/>}>
@@ -18,6 +19,7 @@ function App() {
            </Route>
       </Routes>
     </BrowserRouter>
+    </BudgetProvider>
   );
 }
 
