@@ -42,7 +42,7 @@ export default function Header() {
                                 </li>))}    
       </ul>
 
-      <button className={`mx-3 btn btn-${isBudget? "success":"dark"}`} onClick={toggleBudget}>{isBudget ? "Disattiva modalità Risaprmio" : "Attiva modalità risparmio"}</button>
+      <button className={`mx-3 btn btn-${isBudget? "success":"light"}`} onClick={toggleBudget}>{isBudget ? "Disattiva modalità risparmio" : "Attiva modalità risparmio"}</button>
     </div>
   </div>
 </nav>                                     
