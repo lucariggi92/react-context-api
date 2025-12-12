@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom"
 import logo from "/src/assets/logo.jpeg";
+import {useBudget} from "../context/BudgetContext"
 
 export default function Header() {
+
+    const {toggleBudget, isBudget} = useBudget();
 
 
 
@@ -38,6 +41,8 @@ export default function Header() {
                                     <NavLink to={link.path} className="nav-link active text-light" aria-current="page" >{link.title}</NavLink>
                                 </li>))}    
       </ul>
+
+      <button className={`mx-3 btn btn-${isBudget? "success":"dark"}`} onClick={toggleBudget}>{isBudget ? "Disattiva modalità Risaprmio" : "Attiva modalità risparmio"}</button>
     </div>
   </div>
 </nav>                                     

@@ -5,10 +5,11 @@ import ChiSiamo from "./pages/ChiSiamo";
 import Prodotti from "./pages/Prodotti";
 import DefaultLayout from './layouts/DefaultLayout';
 import SingleProduct from './pages/SingleProduct';
+import { BudgetProvider } from './context/BudgetContext';
 
 function App() {
   return (
-       <BudgetProvider>
+      <BudgetProvider>
     <BrowserRouter>
       <Routes>
         <Route element ={<DefaultLayout/>}>
@@ -20,6 +21,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     </BudgetProvider>
+ 
   );
 }
 
